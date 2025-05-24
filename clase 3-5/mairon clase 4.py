@@ -1,43 +1,43 @@
 # #ASIGNACION
 
-'''a="hola",3
-print(a)'''
+a="hola",3
+print(a)
 ##ASIGNACION MULTIPLE
 
-'''x,z,t=6,3,9
+x,z,t=6,3,9
 print(x)
 print(z)
-print(t)'''
+print(t)
 ##ASIGNAR EL MISMO VALOR A LAS VARIABLES
 
-'''x=y=z="hola"
-print(x,y,z)'''
+r=h=q="hola"
+print(r,h,q)
 ##ASIGNACION CON OPERACIONES
 
-'''x=10
-x=x+5
-print(x)
+ñ=10
+ñ=ñ+5
+print(ñ)
 
-z=30
-z+=2
-z*=3
-print(z)
+o=30
+o+=2
+o*=3
+print(o)
 
 name1="hola pepe "
 name1+="¿como estas? "
 name1+="¿bien?"
 name1*=2
-print(name1)'''
+print(name1)
 
 ##CONCATENACION
 
-'''tex1="todo el que tiene un porque"
+tex1="todo el que tiene un porque"
 tex2="puede soportar casi cualquier como"
-print(tex1+" "+tex2)'''
+print(tex1+" "+tex2)
 
 ##BUSQUEDA
 
-'''TEXTOmigala="""Debo admitir que no hemos estado escribiendo tan seguido como antes. Me encantaría culpar a nuestros demandantes trabajos, pero el otro día pasé tres horas viendo capítulos de Adventure Time así que, al menos yo, no tengo una excusa de verdad.
+TEXTOmigala="""Debo admitir que no hemos estado escribiendo tan seguido como antes. Me encantaría culpar a nuestros demandantes trabajos, pero el otro día pasé tres horas viendo capítulos de Adventure Time así que, al menos yo, no tengo una excusa de verdad.
 De todos modos, me gusta pensar que tantas horas de procrastinación eventualmente servirán de algo, así que hice una compilación con los mejores cortos de ciencia ficción que vi esta semana, espero que ustedes pierdan tanto tiempo como yo viéndolos:"""
 palabra=TEXTOmigala.find("gusta pensar")
 t=len(TEXTOmigala) #el total de caracteres
@@ -46,12 +46,12 @@ print(palabra,t)
 ##EXTRACCION
 
 cachito=palabra[263:273]
-print(palabre[263:272])'''
+print(palabre[263:272])
 
 
 ##ACTIVIDAD
 #1
-'''Actividad="El conocimiento es poder"
+Actividad="El conocimiento es poder"
 print(Actividad.find("conocimiento"),Actividad.find("poder"))
 #2
 punto2="la practica hace al maestro"
@@ -87,7 +87,7 @@ si mis ojos están bañados por el llanto
 es porque tú eres para mi un lindo encanto"""
 print(texto_ejemplo2.find("le"),texto_ejemplo2.find("encanto"))
 ext=texto_ejemplo2[123:619]
-print(ext)'''
+print(ext)
 
 
 #MI PRIMER PROGRAMA
