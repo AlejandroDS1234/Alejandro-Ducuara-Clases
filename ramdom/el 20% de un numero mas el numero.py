@@ -1,3 +1,4 @@
+#el 20% de un numero mas ese numero.
 p=[float(input("Ingrese el numero para sumar con su 20%: "))]
 t=int(input("cuantos numeros necesita?: "))
 print(p[0])
