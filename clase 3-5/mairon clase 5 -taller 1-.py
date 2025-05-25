@@ -142,7 +142,7 @@ print(f"los primeros 10 caracteres son: {ej23frase[0:10]}")
 print("24) elevar al cuadrado")
 ej24num=int(input("ingresa un numero: "))
 ej24op=ej24num*ej24num
-print(f"el elevado al cuadrado del numero {ej24num} es ej24op")
+print(f"el elevado al cuadrado del numero {ej24num} es {ej24op}")
 
 #25 -lo hizo una compañera, salome-
 print("25) cual numero es mayor")
