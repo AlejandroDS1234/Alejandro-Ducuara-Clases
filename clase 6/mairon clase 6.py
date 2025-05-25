@@ -1,5 +1,5 @@
 #ACTIVIDAD
-'''nbclnts=["mairon","pepe","aurturo","pepe","maximiliano","ligoverto"]
+nbclnts=["mairon","pepe","aurturo","pepe","maximiliano","ligoverto"]
 #Agregar a juliana
 nbclnts.append("JULIANA")
 #La cantidad de elementos
@@ -10,10 +10,10 @@ print(f"El nombre alfabeticamente mayor es: {max(nbclnts)} y el menor es: {min(n
 #Numero intermedio
 
 print(f"juliana esta en la posicion: {nbclnts.index("JULIANA")}")
-print(f"La lista resultante es: {nbclnts}")'''
+print(f"La lista resultante es: {nbclnts}")
 
 
-
+print("")
 #remover ejemplo
 
 numeros=[1,2,3,2]
