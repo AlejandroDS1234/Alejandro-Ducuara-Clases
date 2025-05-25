@@ -46,8 +46,7 @@ print(palabra,t)
 
 ##EXTRACCION
 
-cachito=palabra[263:273]
-print(palabre[263:272])
+print(TEXTOmigala[263:272])
 
 
 ##ACTIVIDAD
