@@ -102,7 +102,7 @@ print("VEINTEAVO:")
 p20tp=("cinco","cuatro","tres","dos","uno")
 p20lis=list(p20tp)
 p20lis.remove(p20lis[-1])
-print(f"la lista sin el ultimo elemento: {p20lis}
+print(f"la lista sin el ultimo elemento: {p20lis}")
 
 
 
