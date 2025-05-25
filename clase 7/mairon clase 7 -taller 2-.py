@@ -96,13 +96,13 @@ print(f"Lista: {p18lis}\n")
 print("DECIMO NOVENO:")
 p19lis=[5,4,3,2]
 p19tp=tuple(p19lis)
-print(f"La cantidad de elementos en la tupla es: {p19tp}\n")
+print(f"La cantidad de elementos en la tupla {p19tp} es: {len(p19tp)}\n")
 #veinte
 print("VEINTEAVO:")
 p20tp=("cinco","cuatro","tres","dos","uno")
 p20lis=list(p20tp)
 p20lis.remove(p20lis[-1])
-print(p20lis)
+print(f"la lista sin el ultimo elemento: {p20lis}
 
 
 
