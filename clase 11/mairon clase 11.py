@@ -1,6 +1,7 @@
 #continuacion diccionarios
+#actividad del profe para una memoria 
 dictionary={"a":1,"e":2}
-print()
+
 print(dictionary)
 print(f"clave a: {dictionary['a']}")
 print(f"clave e: {dictionary['e']}")
