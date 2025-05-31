@@ -15,7 +15,7 @@ if x>10:
     if x>20:
         print("y tambien por encima de 20!")
     else:
-        print("Pero no por enciama de 20")"""
+        print("Pero no por enciama de 20")
 
 #sentencia elif
 print("Elif")
@@ -28,8 +28,23 @@ if a>100000:
 elif a>300:
     print("sus numeros son grandes")
 else:
-    print("sus numeros son pequeños")
+    print("sus numeros son pequeños")"""
 
+#ACTIVIDAD
+
+año=int(input("iNGRESE SU AÑO DE NACIMIENTO: "))
+if año<=1940 and año>=1920:
+    print("Usted es de la generacion silenciosa")
+elif año<=1964:
+    print("Usted es de la generacion Boomer")
+elif año<=1979:
+    print("Usted es de la generacion X")
+elif año<=2000:
+    print("Usted es de la generacion Y")
+elif año<=2010:
+    print("Usted es de la generacion Z")
+else:
+    print("Su año no tiene generacion")
 
 
 
