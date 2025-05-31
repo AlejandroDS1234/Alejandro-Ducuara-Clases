@@ -22,12 +22,12 @@ print("Elif")
 c=int(input("Ingrese un numero: "))
 b=int(input("ingrese otro numero: "))
 a=b*c
-if a==4:
-    print("A es igual a 4")
-elif a==5:
-    print("A es igual a 5")
-elif a==6:
-    print("A es igual a 6")
+if a>100000:
+    print("sus numeros son enormes")
+elif a>300:
+    print("sus numeros son grandes")
+elif a<20:
+    print("sus numeros son pequeños")
 else:
     print("No se cumple la condicion")
 
