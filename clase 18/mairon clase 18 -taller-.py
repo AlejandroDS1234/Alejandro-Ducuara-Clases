@@ -166,4 +166,24 @@ rlis=list(rnum)
 if rlis[1]==2:
     rlis[1]=9
 rtupla=tuple(rlis)
-print(rtupla)
+print(rtupla,"\n")
+
+#19
+print("19) coordenadas")
+snum=(4, 9)
+print(snum)
+if snum[1]>5:
+    print("Coordenada alta\n")
+else:
+    print("Coordenada baja\n")
+
+#20
+print("20) Tuplas iguales")
+tnum1=(3,4)
+tnum2=(3,5)
+print(tnum1,"\n",tnum2)
+if tnum1==tnum2:
+    print("Tuplas iguales")
+else:
+    print("Tuplas diferentes")
+
