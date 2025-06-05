@@ -98,8 +98,57 @@ else:
 
 #11
 print("11) tercer mayor que 10")
-knum=[int(input("")),]
+knum=[int(input("ingresa un primer numero: ")),int(input("ingresa un segundo numero: ")),int(input("ingresa un tercer numero: ")),int(input("ingresa un cuarto numero: ")),int(input("ingresa un quinto numero: "))]
+print(f"Lista: {knum}")
+if knum[2]>3:
+    print(f"{knum[2]} es mayor que 10\n")
+else:
+    print("El tercer elemento no es mayor que 10\n")
+    
+#12
+print("12) 7 esta en la lista?")
+lnum=[3,5,7,9]
+print(lnum)
+if lnum.count(7)==0:
+    print("Esta en la lista\n")
+else:
+    print("No esta en la lista\n")
 
+#13
+print("13) sumar los dos primeros elementos de la lista")
+mnum=[4,6,2,8]
+mop=mnum[0]+mnum[1]
+if mop>10:
+    print("Suma alta\n")
+else:
+    print("Suma baja\n")
+    
+#14
+print("14) Ultimo nombre")
+nname=["Ana","Luis","Pedro","Marta"]
+print(nname)
+print(f"El ultimo nombre es: {nname[-1]}")
+if nname[-1]=="Marta":
+    print("Nombre correcto\n")
+else:
+    print("Nombre diferente\n")
+
+#15
+print("15) cambiar color azul")
+ocolor=[input("Ingresa un color").lower(),input("Ingresa un segundo color").lower(),input("Ingresa un tercer color").lower()]
+print(ocolor)
+if ocolor[1]=="azul":
+    ocolor[1]=input("Cambia el color: ")
+    print(f"Lista actualizada: {ocolor}\n")
+else:
+    print("Esta es la lista\n")
+    
+#16
+print("16) orden segun el mayor")
+pnum=(5,8,12,20)#algo
+
+
+        
 
 
 
