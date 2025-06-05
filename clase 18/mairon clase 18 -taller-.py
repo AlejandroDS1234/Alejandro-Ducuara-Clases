@@ -84,7 +84,7 @@ inum=int(input("Ingrese un numero: "))
 if inum/5==inum//5+0.0 and inum/3==inum//3+0.0:
     print(f"El numero {inum} es multiplo de 3 y 5\n")
 else:
-    print("El numero no es multiplo de 3 y 5\n")"""
+    print("El numero no es multiplo de 3 y 5\n")
 
 #10
 print("10) Numero divisible entre 2 numeros dados")
@@ -145,14 +145,25 @@ else:
     
 #16
 print("16) orden segun el mayor")
-pnum=(5,8,12,20)#algo
+pnum=(5,8,12,20)
+if pnum[0]<pnum[-1]:
+    print(f"Tupla ordenada ascendente: {sorted(pnum)}\n")
+else:
+    print(f"Tupla orden descendente: {sorted(pnum, reverse=True)}\n")
 
+#17
+print("17) El segundo valor mayor a 30")
+qnum=(25, 32, 28)
+if qnum[1]>30:
+    print("Edad mayor a 30\n")
+else:
+    print("Edad menor o igual a 30\n")"""
 
-        
-
-
-
-    
-
-
-    
+#18
+print("18) convertir tuplas y listas")
+rnum=(1,2,3)
+rlis=list(rnum)
+if rlis[1]==2:
+    rlis[1]=9
+rtupla=tuple(rlis)
+print(rtupla)
