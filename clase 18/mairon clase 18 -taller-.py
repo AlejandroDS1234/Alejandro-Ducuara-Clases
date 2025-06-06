@@ -225,6 +225,6 @@ if ynum.get("pan")!=None:
     print(f"pan: {ynum['pan']}\n")
 else:
     print("Producto no disponible")
-
-
-
+#taller
+#Terminado
+#FIn
