@@ -1,7 +1,7 @@
 #Taller condicionales
 #Operaciones matematicas
 #1
-"""print("1) Numero positivo negativo o cero")
+print("1) Numero positivo negativo o cero")
 anum=int(input("Ingrese un numero: "))
 if anum>0:
     print(f"El numero {anum} es positivo\n")
@@ -97,10 +97,10 @@ else:
     print(f"El numero {jnum1} no es divisible entre {jnum2} y {jnum3}\n")
 
 #11
-print("11) tercer mayor que 10")
+print("11) tercero mayor que 10")
 knum=[int(input("ingresa un primer numero: ")),int(input("ingresa un segundo numero: ")),int(input("ingresa un tercer numero: ")),int(input("ingresa un cuarto numero: ")),int(input("ingresa un quinto numero: "))]
 print(f"Lista: {knum}")
-if knum[2]>3:
+if knum[2]>10:
     print(f"{knum[2]} es mayor que 10\n")
 else:
     print("El tercer elemento no es mayor que 10\n")
@@ -110,14 +110,15 @@ print("12) 7 esta en la lista?")
 lnum=[3,5,7,9]
 print(lnum)
 if lnum.count(7)==0:
-    print("Esta en la lista\n")
-else:
     print("No esta en la lista\n")
+else:
+    print("Esta en la lista\n")
 
 #13
 print("13) sumar los dos primeros elementos de la lista")
 mnum=[4,6,2,8]
 mop=mnum[0]+mnum[1]
+print(mnum)
 if mop>10:
     print("Suma alta\n")
 else:
@@ -135,7 +136,7 @@ else:
 
 #15
 print("15) cambiar color azul")
-ocolor=[input("Ingresa un color").lower(),input("Ingresa un segundo color").lower(),input("Ingresa un tercer color").lower()]
+ocolor=[input("Ingresa un color: ").lower(),input("Ingresa un segundo color: ").lower(),input("Ingresa un tercer color: ").lower()]
 print(ocolor)
 if ocolor[1]=="azul":
     ocolor[1]=input("Cambia el color: ")
@@ -157,7 +158,7 @@ qnum=(25, 32, 28)
 if qnum[1]>30:
     print("Edad mayor a 30\n")
 else:
-    print("Edad menor o igual a 30\n")"""
+    print("Edad menor o igual a 30\n")
 
 #18
 print("18) convertir tuplas y listas")
@@ -183,7 +184,47 @@ tnum1=(3,4)
 tnum2=(3,5)
 print(tnum1,"\n",tnum2)
 if tnum1==tnum2:
-    print("Tuplas iguales")
+    print("Tuplas iguales\n")
 else:
-    print("Tuplas diferentes")
+    print("Tuplas diferentes\n")
+
+#21
+print("21) Mayor o menor de edad")
+unum={"nombre":"Juan","edad":17}
+if unum["edad"]>=18:
+    print("Adulto\n")
+else:
+    print("Menor de edad\n")
+
+#22
+print("22) Cambiar edad")
+vnum={"nombre":"Lucia","edad":20}
+if vnum["edad"]>18:
+    vnum["edad"]=21
+print(vnum,"\n")
+
+#23
+print("23) agregar ciudad")
+wnum={"nombre":"Carlos"}
+if wnum.get("ciudad")==None:
+    wnum["ciudad"]="Bogota"
+print(f"{wnum}\n")
+
+#24
+print("24) mirar si precio existe")
+xnum={"producto":"pan","precio":1200}
+if xnum.get("precio")!=None:
+    print(f"precio: {xnum["precio"]}\n")
+else:
+    print("No hay precio\n")
+
+#25
+print("25) precio de pan")
+ynum={"pan":1200,"leche":2000}
+if ynum.get("pan")!=None:
+    print(f"pan: {ynum['pan']}\n")
+else:
+    print("Producto no disponible")
+
+
 
