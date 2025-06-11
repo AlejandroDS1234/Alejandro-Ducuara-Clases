@@ -1,6 +1,6 @@
 #Controladores de flujo (condicionales)(if)
 #if  y else
-"""print("If y Else")
+print("If y Else")
 edad=30
 if edad>=18:
     print("Es adulto")
@@ -28,7 +28,7 @@ if a>100000:
 elif a>300:
     print("sus numeros son grandes")
 else:
-    print("sus numeros son pequeños")"""
+    print("sus numeros son pequeños")
 
 #ACTIVIDAD
 
@@ -46,6 +46,5 @@ elif año<=2010:
 else:
     print("Su año no tiene generacion")
 #fin
-
-
-#
+#clase
+#16
