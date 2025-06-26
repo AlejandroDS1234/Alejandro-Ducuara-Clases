@@ -145,7 +145,7 @@ while True:
         print("Felicidades!! encontro una de las frutas")
         break
     else:
-        print("Esa fruta no esta en la tupla")"""
+        print("Esa fruta no esta en la tupla")
 
 #9
 print("9) Diccionario de traduccion")
@@ -155,5 +155,41 @@ while True:
     try:
         ipalabra=input("Ingrese una palabra de las que estan para traducir: ")
         print(f"La traduccion de {ipalabra} es {ipalabras[ipalabra]}")
+        idesicion=input("Desea intentar otra palabra? (si/no): ")
+        if idesicion!=si:
+            print("Ok hasta luego")
+            break
     except KeyError:
-        print("Esa palabra no esta disponible para traduccion, intente otra")        
+        print("Esa palabra no esta disponible para traduccion, intente otra")"""
+        
+#10
+print("10) Calculadora basica")
+while True:
+    print("Operaciones disponibles:\nSuma=1\nResta=2\nMultiplicacion\nDivision\nSalir=5")
+    try:
+        iopelg=int(input("ingrese la operacion que desea realizar: "))
+        if iopelg==1:
+            iopnum1=float(input("Ingrese el numero para sumar:"))
+            iopnum2=float(input("Ingrese el segundo numero para sumar:"))
+            iop=iopnum1+iopnum2
+            print(f"El resultado de {iopnum1}+{iopnum2} es {iop}")
+        elif iopelg==2:
+            iopnum1=float(input("Ingrese el numero para restar:"))
+            iopnum2=float(input("Ingrese el segundo numero para restar:"))
+            iop=iopnum1-iopnum2
+            print(f"El resultado de {iopnum1}{iopnum2} es {iop}")
+        elif iopelg==3:
+            iopnum1=float(input("Ingrese el numero para multiplicar:"))
+            iopnum2=float(input("Ingrese el segundo numero para multiplicar:"))
+            iop=iopnum1*iopnum2
+            print(f"El resultado de {iopnum1}{iopnum2} es {iop}")
+        elif iopelg==4:
+            iopnum1=float(input("Ingrese el numero para dividir:"))
+            iopnum2=float(input("Ingrese el segundo numero para dividir:"))
+            iop=iopnum1/iopnum2
+            print(f"El resultado de {iopnum1}/{iopnum2} es {iop}")
+        elif iopelg==5:
+        else:
+            print("Operacion no disponible")
+    except ValueError:
+        print("opcion no disponible")     
