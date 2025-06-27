@@ -1,4 +1,4 @@
-"""print("Taller while\n")
+print("Taller while\n")
 
 #1
 print("1) Suma hasta cero")
@@ -316,7 +316,7 @@ while True:
         print("\nOk hasta luego\n\n")
         break
     nnumeros.clear()
-    ncontador=1"""
+    ncontador=1
 
 #15
 print("15) Diccionario de estudiantes")
@@ -356,5 +356,5 @@ print("Programa finalizado")
 #taller
 #terminado
 #completo
-#hoy
-#Completo 100%
+#el mañana de hoy
+#Completo 200%
