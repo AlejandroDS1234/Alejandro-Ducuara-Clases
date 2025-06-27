@@ -1,7 +1,7 @@
 print("Taller while\n")
-#1
 
-"""print("1) Suma hasta cero")
+#1
+print("1) Suma hasta cero")
 suma=[]
 while True:
     try:
@@ -232,7 +232,7 @@ print("11) Registro de edades")
 kdatos={}
 kcontador=1
 while True:
-    kdatos[f"nombre{kcontador}"]=input(f"Ingrese el nombre {kcontador}: ")
+    kdatos[f"nombre{kcontador}"]=input(f"Ingrese el nombre {kcontador} (Escriba 'salir' para no ingresar mas): ")
     if kdatos[f"nombre{kcontador}"]=="salir":
         del(kdatos[f"nombre{kcontador}"])
         print(f"Estos son los nombres y edades ingresados:\n{kdatos}")
@@ -280,7 +280,7 @@ while True:
     mdesicion=input("Desea saber las potencias de otro numero?(si/no): ").lower()
     if mdesicion!="si":
         print("\nOk hasta luego\n\n")
-        break"""
+        break
 
 #14
 print("14) Lista de cuadrados")
@@ -302,3 +302,32 @@ while True:
         break
     nnumeros.clear()
     ncontador=1
+
+#15
+print("15) Diccionario de estudiantes")
+odatos={}
+ocontador=1
+while True:
+    odatos[f"nombre{ocontador}"]=input(f"Ingrese el nombre {ocontador} (Escriba 'fin' para no ingresar mas): ")
+    if odatos[f"nombre{ocontador}"]=="fin":
+        del(odatos[f"nombre{ocontador}"])
+        print(f"Estos son los nombres y edades ingresados:\n{odatos}")
+        odesicion=input("Desea volver a ingresar datos?(si/no): ").lower()
+        odatos.clear()
+        if odesicion!="si":
+            print("\nOk hasta luego\n\n")
+            break
+        ocontador=1
+    ocoun=0
+    while ocoun==0:
+        try:
+            odatos[f"nota{ocontador}"]=float(input(f"Ingrese la nota final {ocontador}: "))
+            ocoun=1
+        except ValueError:
+            print("Edad no valida, vuelva a intantar")
+    print("\n")
+    ocontador+=1
+#taller
+#terminado
+#completo
+#hoy
