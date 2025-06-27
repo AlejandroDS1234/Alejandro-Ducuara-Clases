@@ -1,4 +1,4 @@
-print("Taller while\n")
+"""print("Taller while\n")
 
 #1
 print("1) Suma hasta cero")
@@ -33,7 +33,7 @@ while True:
         break
 
 #3
-print("Lista de compras")
+print("3) Lista de compras")
 cproductos=[]
 while True:
     cproducto=input("Ingrese un producto (Escriba 'fin' para terminar): ")
@@ -48,7 +48,7 @@ while True:
             break
 
 #4
-print("Contador de pare e impares")
+print("4) Contador de pares e impares")
 dcontador=0
 dpares=[]
 dimpares=[]
@@ -95,15 +95,22 @@ while True:
             except ValueError:
                 enotas.remove(enotas[cannota])
                 cannota-=1
-        print(f"Su promedio de notas es: {(sum(enotas))/len(enotas)}")
-        enotas.clear()
-        edesicion=input("Desea volver a iniciar? (si/no): ").lower()
-        if edesicion!="si":
-            print("\nOk hasta luego\n\n")
-            break
+        if len(enotas)!=0:
+            print(f"Su promedio de notas es: {(sum(enotas))/len(enotas)}")
+            enotas.clear()
+            edesicion=input("Desea volver a iniciar? (si/no): ").lower()
+            if edesicion!="si":
+                print("\nOk hasta luego\n\n")
+                break
+        else:
+            print("no ha ingresado ninguna nota")
+            edesicion=input("Desea volver a iniciar? (si/no): ").lower()
+            if edesicion!="si":
+                print("\nOk hasta luego\n\n")
+                break
 
 #6
-print("Tabla de multiplicar interactiva")
+print("6) Tabla de multiplicar interactiva")
 while True:
     try:
         fnum=int(input("Ingrese el numero entero para hacer su tabla de multiplicar: "))
@@ -156,7 +163,7 @@ while True:
         ipalabra=input("Ingrese una palabra de las que estan para traducir: ")
         print(f"La traduccion de {ipalabra} es {ipalabras[ipalabra]}")
         idesicion=input("Desea intentar otra palabra? (si/no): ")
-        if idesicion!=si:
+        if idesicion!="si":
             print("\nOk hasta luego\n\n")
             break
     except KeyError:
@@ -167,7 +174,7 @@ print("10) Calculadora basica")
 while True:
     print("\nOperaciones disponibles:\nSuma=1\nResta=2\nMultiplicacion=3\nDivision=4\nSalir=5")
     try:
-        iopelg=int(input("ingrese la operacion que desea realizar: "))
+        iopelg=int(input("ingrese el numero de la operacion que desea realizar: "))
         try:
             if iopelg==1:
                 icoun=0
@@ -209,7 +216,7 @@ while True:
                         iopnum1=float(input("Ingrese el numero para dividir:"))
                         iopnum2=float(input("Ingrese el segundo numero para dividir:"))
                         iop=round(iopnum1/iopnum2,3)
-                        print(f"El resultado de {iopnum1}/{iopnum2} es {iop}")
+                        print(f"El resultado de {iopnum1}/{iopnum2} es {iop} aprox")
                         icoun=1
                     except ValueError:
                         print("Ese no es un numero, intentelo de nuevo")
@@ -229,28 +236,36 @@ while True:
 
 #11
 print("11) Registro de edades")
-kdatos={}
-kcontador=1
 while True:
-    kdatos[f"nombre{kcontador}"]=input(f"Ingrese el nombre {kcontador} (Escriba 'salir' para no ingresar mas): ")
-    if kdatos[f"nombre{kcontador}"]=="salir":
-        del(kdatos[f"nombre{kcontador}"])
-        print(f"Estos son los nombres y edades ingresados:\n{kdatos}")
-        kdesicion=input("Desea volver a ingresar datos?(si/no): ").lower()
-        kdatos.clear()
-        if kdesicion!="si":
-            print("\nOk hasta luego\n\n")
+    kdatos={}
+    kcontador=1
+    while True:
+        kdatos[f"nombre{kcontador}"]=input(f"Ingrese el nombre {kcontador} (Escriba 'salir' para no ingresar mas): ")
+        if kdatos[f"nombre{kcontador}"]=="salir":
+            del(kdatos[f"nombre{kcontador}"])
+            print(f"Estos son los nombres y edades ingresados:\n{kdatos}")
+            kdesicion=input("Desea volver a ingresar datos?(si/no): ").lower()
+            kdatos.clear()
+            if kdesicion!="si":
+                print("\nOk hasta luego\n\n")
+                kstop=1
+                break
+            else:
+                break
+        kcoun=0
+        while kcoun==0:
+            try:
+                kdatos[f"edad{kcontador}"]=int(input(f"Ingrese la edad {kcontador}: "))
+                kcoun=1
+            except ValueError:
+                print("Edad no valida, vuelva a intantar")
+        print("\n")
+        kcontador+=1
+    try:
+        if kstop==1:
             break
-        kcontador=1
-    kcoun=0
-    while kcoun==0:
-        try:
-            kdatos[f"edad{kcontador}"]=int(input(f"Ingrese la edad {kcontador}: "))
-            kcoun=1
-        except ValueError:
-            print("Edad no valida, vuelva a intantar")
-    print("\n")
-    kcontador+=1
+    except NameError:
+        print(end="")
 
 #12
 print("12) Buscar en lista")  
@@ -301,33 +316,45 @@ while True:
         print("\nOk hasta luego\n\n")
         break
     nnumeros.clear()
-    ncontador=1
+    ncontador=1"""
 
 #15
 print("15) Diccionario de estudiantes")
-odatos={}
-ocontador=1
 while True:
-    odatos[f"nombre{ocontador}"]=input(f"Ingrese el nombre {ocontador} (Escriba 'fin' para no ingresar mas): ")
-    if odatos[f"nombre{ocontador}"]=="fin":
-        del(odatos[f"nombre{ocontador}"])
-        print(f"Estos son los nombres y edades ingresados:\n{odatos}")
-        odesicion=input("Desea volver a ingresar datos?(si/no): ").lower()
-        odatos.clear()
-        if odesicion!="si":
-            print("\nOk hasta luego\n\n")
+    odatos={}
+    ocontador=1
+    while True:
+        odatos[f"nombre{ocontador}"]=input(f"Ingrese el nombre {ocontador} (Escriba 'fin' para no ingresar mas): ")
+        if odatos[f"nombre{ocontador}"]=="fin":
+            del(odatos[f"nombre{ocontador}"])
+            print(f"Estos son los nombres y edades ingresados:\n{odatos}")
+            odesicion=input("Desea volver a ingresar datos?(si/no): ").lower()
+            odatos.clear()
+            if odesicion!="si":
+                print("\nOk hasta luego\n\n")
+                ostop=1
+                break
+            else:
+                break
+        ocoun=0
+        while ocoun==0:
+            try:
+                odatos[f"nota{ocontador}"]=float(input(f"Ingrese la nota final {ocontador}: "))
+                ocoun=1
+            except ValueError:
+                print("Edad no valida, vuelva a intantar")
+        print("\n")
+        ocontador+=1
+    try:
+        if ostop==1:
             break
-        ocontador=1
-    ocoun=0
-    while ocoun==0:
-        try:
-            odatos[f"nota{ocontador}"]=float(input(f"Ingrese la nota final {ocontador}: "))
-            ocoun=1
-        except ValueError:
-            print("Edad no valida, vuelva a intantar")
-    print("\n")
-    ocontador+=1
+    except NameError:
+        print(end="")
+
+#fin
+print("Programa finalizado")
 #taller
 #terminado
 #completo
 #hoy
+#Completo 100%
