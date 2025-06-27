@@ -44,7 +44,7 @@ while True:
         cproductos.clear()
         cdesicion=input("Desea volver a iniciar?(si/no)").lower()
         if cdesicion!="si":
-            print("Ok hasta luego\n\n")
+            print("\nOk hasta luego\n\n")
             break
 
 #4
@@ -76,7 +76,7 @@ while True:
     dcontador=0
     ddesicion=input("Desea volver a iniciar?(si/no)").lower()
     if ddesicion!="si":
-        print("Ok hasta luego\n\n")
+        print("\nOk hasta luego\n\n")
         break
 
 #5
@@ -99,7 +99,7 @@ while True:
         enotas.clear()
         edesicion=input("Desea volver a iniciar? (si/no): ").lower()
         if edesicion!="si":
-            print("Ok hasta luego\n\n")
+            print("\nOk hasta luego\n\n")
             break
 
 #6
@@ -115,7 +115,7 @@ while True:
             fcontador+=1
         fdesicion=input("Desea volver a iniciar?(si/no): ").lower()
         if fdesicion!="si":
-            print("Ok hasta luego\n\n")
+            print("\nOk hasta luego\n\n")
             break   
     except ValueError:
         print("Ese no es un numero entero, intentelo de nuevo")
@@ -131,7 +131,7 @@ while True:
         elif gnum<gnumsecret:
             print("El numero es mayor que ese")
         else:
-            print("Felicidades!! encontro el numero")
+            print("\nFelicidades!! encontro el numero\n\n")
             break
     except ValueError:
         print("Ese no es un numero entero, vuelva a intentar")
@@ -142,7 +142,7 @@ hfrutas=("mango","piña","kiwi","cereza","papaya")
 while True:
     hfruta=input("Adivine una de las frutas: ").lower()
     if hfruta in hfrutas:
-        print("Felicidades!! encontro una de las frutas")
+        print("\nFelicidades!! encontro una de las frutas\n\n")
         break
     else:
         print("Esa fruta no esta en la tupla")
@@ -157,39 +157,148 @@ while True:
         print(f"La traduccion de {ipalabra} es {ipalabras[ipalabra]}")
         idesicion=input("Desea intentar otra palabra? (si/no): ")
         if idesicion!=si:
-            print("Ok hasta luego")
+            print("\nOk hasta luego\n\n")
             break
     except KeyError:
-        print("Esa palabra no esta disponible para traduccion, intente otra")"""
+        print("Esa palabra no esta disponible para traduccion, intente otra")
         
 #10
 print("10) Calculadora basica")
 while True:
-    print("Operaciones disponibles:\nSuma=1\nResta=2\nMultiplicacion\nDivision\nSalir=5")
+    print("\nOperaciones disponibles:\nSuma=1\nResta=2\nMultiplicacion=3\nDivision=4\nSalir=5")
     try:
         iopelg=int(input("ingrese la operacion que desea realizar: "))
-        if iopelg==1:
-            iopnum1=float(input("Ingrese el numero para sumar:"))
-            iopnum2=float(input("Ingrese el segundo numero para sumar:"))
-            iop=iopnum1+iopnum2
-            print(f"El resultado de {iopnum1}+{iopnum2} es {iop}")
-        elif iopelg==2:
-            iopnum1=float(input("Ingrese el numero para restar:"))
-            iopnum2=float(input("Ingrese el segundo numero para restar:"))
-            iop=iopnum1-iopnum2
-            print(f"El resultado de {iopnum1}{iopnum2} es {iop}")
-        elif iopelg==3:
-            iopnum1=float(input("Ingrese el numero para multiplicar:"))
-            iopnum2=float(input("Ingrese el segundo numero para multiplicar:"))
-            iop=iopnum1*iopnum2
-            print(f"El resultado de {iopnum1}{iopnum2} es {iop}")
-        elif iopelg==4:
-            iopnum1=float(input("Ingrese el numero para dividir:"))
-            iopnum2=float(input("Ingrese el segundo numero para dividir:"))
-            iop=iopnum1/iopnum2
-            print(f"El resultado de {iopnum1}/{iopnum2} es {iop}")
-        elif iopelg==5:
-        else:
-            print("Operacion no disponible")
+        try:
+            if iopelg==1:
+                icoun=0
+                while icoun==0:
+                    try:
+                        iopnum1=float(input("Ingrese el numero para sumar:"))
+                        iopnum2=float(input("Ingrese el segundo numero para sumar:"))
+                        iop=iopnum1+iopnum2
+                        print(f"El resultado de {iopnum1}+{iopnum2} es {iop}")
+                        icoun=1
+                    except ValueError:
+                        print("Ese no es un numero, intentelo de nuevo")
+            elif iopelg==2:
+                icoun=0
+                while icoun==0:
+                    try:
+                        iopnum1=float(input("Ingrese el numero para restar:"))
+                        iopnum2=float(input("Ingrese el segundo numero para restar:"))
+                        iop=iopnum1-iopnum2
+                        print(f"El resultado de {iopnum1}-{iopnum2} es {iop}")
+                        icoun=1
+                    except ValueError:
+                        print("Ese no es un numero, intentelo de nuevo")
+            elif iopelg==3:
+                icoun=0
+                while icoun==0:
+                    try:
+                        iopnum1=float(input("Ingrese el numero para multiplicar:"))
+                        iopnum2=float(input("Ingrese el segundo numero para multiplicar:"))
+                        iop=iopnum1*iopnum2
+                        print(f"El resultado de {iopnum1}*{iopnum2} es {iop}")
+                        icoun=1
+                    except ValueError:
+                        print("Ese no es un numero, intentelo de nuevo")
+            elif iopelg==4:
+                icoun=0
+                while icoun==0:
+                    try:
+                        iopnum1=float(input("Ingrese el numero para dividir:"))
+                        iopnum2=float(input("Ingrese el segundo numero para dividir:"))
+                        iop=round(iopnum1/iopnum2,3)
+                        print(f"El resultado de {iopnum1}/{iopnum2} es {iop}")
+                        icoun=1
+                    except ValueError:
+                        print("Ese no es un numero, intentelo de nuevo")
+            elif iopelg==5:
+                print("\nOk hasta luego\n\n")
+                break
+            else:
+                print("Operacion no disponible")
+            idesicion=input("Desea hacer otra operacion? (si/no)").lower()
+            if idesicion!="si":
+                print("\nOk hasta luego\n\n")
+                break
+        except ValueError:
+            print("Ese no es un numero, intente de nuevo")
     except ValueError:
-        print("opcion no disponible")     
+        print("opcion no disponible")
+
+#11
+print("11) Registro de edades")
+kdatos={}
+kcontador=1
+while True:
+    kdatos[f"nombre{kcontador}"]=input(f"Ingrese el nombre {kcontador}: ")
+    if kdatos[f"nombre{kcontador}"]=="salir":
+        del(kdatos[f"nombre{kcontador}"])
+        print(f"Estos son los nombres y edades ingresados:\n{kdatos}")
+        kdesicion=input("Desea volver a ingresar datos?(si/no): ").lower()
+        kdatos.clear()
+        if kdesicion!="si":
+            print("\nOk hasta luego\n\n")
+            break
+        kcontador=1
+    kcoun=0
+    while kcoun==0:
+        try:
+            kdatos[f"edad{kcontador}"]=int(input(f"Ingrese la edad {kcontador}: "))
+            kcoun=1
+        except ValueError:
+            print("Edad no valida, vuelva a intantar")
+    print("\n")
+    kcontador+=1
+
+#12
+print("12) Buscar en lista")  
+lcolores=["azul","rojo","verde","amarillo","rosado"]
+while True:
+    lcolor=input("Adivine uno de los colores: ").lower()
+    if lcolor in lcolores:
+        print("Felicidades!! encontro uno de los colores\n\n")
+        break
+    else:
+        print("Ese color no esta en la lista")
+
+#13
+print("13) Potencias de un numero")
+while True:
+    mcontador=0
+    while mcontador!=1:
+        try:
+            mnum=int(input("Ingrese un numero para mostrar sus potencias: "))
+            mcontador=1
+        except ValueError:
+            print("Ese no es un numero, intentelo de nuevo")
+    while mcontador<=5:
+        mop=mnum**mcontador
+        print(f"el resultado de: {mnum}**{mcontador} es: {mop}")
+        mcontador+=1
+    mdesicion=input("Desea saber las potencias de otro numero?(si/no): ").lower()
+    if mdesicion!="si":
+        print("\nOk hasta luego\n\n")
+        break"""
+
+#14
+print("14) Lista de cuadrados")
+ncontador=1
+nnumeros=[]
+while True:
+    while ncontador<=5:
+        try:
+            nnum=int(input(f"Ingrese el #{ncontador} numero entero para saber su cuadrado: "))
+            nop=nnum**2
+            nnumeros.append(nop)
+            ncontador+=1
+        except ValueError:
+            print("Ese no es un numero, intentelo de nuevo")
+    print(f"El cuadrado de los numero que ingreso son:\n{nnumeros}\n")
+    ndesicion=input("Desea saber e cuadrado de otros numeros?(si/no): ").lower()
+    if ndesicion!="si":
+        print("\nOk hasta luego\n\n")
+        break
+    nnumeros.clear()
+    ncontador=1
