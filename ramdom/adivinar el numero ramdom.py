@@ -1,6 +1,8 @@
+
 import random
+
 while True:
-    num=random.choice(range(-100,100))
+    num=random.choice(range(-10**10,10**10))
     contador=0
     while True:
         n=1
@@ -12,9 +14,9 @@ while True:
             except ValueError:
                 print("Ese no es un numero, intente de nuevo")
         if num1>num:
-            print("El numero es menor que ese")
+            print("El numero es menor que ese\n")
         elif num1<num:
-            print("El numero es mayor que ese")
+            print("El numero es mayor que ese\n")
         else:
             print("\nFelicitaciones, ese es el numero\n")
             print(f"En {contador} intentos")
