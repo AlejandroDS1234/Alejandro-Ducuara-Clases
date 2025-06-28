@@ -129,7 +129,7 @@ while True:
         
 #7
 print("7) Adivina el numero")
-gnumsecret=37
+gnumsecret= 37
 while True:
     try:
         gnum=int(input("Adivine el numero entero: "))
@@ -138,7 +138,7 @@ while True:
         elif gnum<gnumsecret:
             print("El numero es mayor que ese")
         else:
-            print("\nFelicidades!! encontro el numero\n\n")
+            print("\nFelicidades!! encontró el número\n\n")
             break
     except ValueError:
         print("Ese no es un numero entero, vuelva a intentar")
