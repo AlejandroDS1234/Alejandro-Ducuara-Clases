@@ -1,0 +1,238 @@
+import java.io.*;
+import java.nio.file.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+
+class Usuario {
+    protected String nombre;
+    protected String identificacion;
+    protected String fechaNacimiento;
+
+    public Usuario(String nombre, String identificacion, String fechaNacimiento) {
+        this.nombre = nombre;
+        this.identificacion = identificacion;
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public void subirLibro(Biblioteca biblioteca, Scanner sc) {
+        System.out.println("SUBIR UN LIBRO");
+        System.out.print("Ingrese el nombre del libro: ");
+        String nombre = sc.nextLine();
+        System.out.print("Ingrese el autor del libro: ");
+        String autor = sc.nextLine();
+        System.out.print("Ingrese el género del libro: ");
+        String genero = sc.nextLine();
+
+        // generar ID aleatorio de 9 dígitos
+        StringBuilder id = new StringBuilder();
+        Random rand = new Random();
+        for (int i = 0; i < 9; i++) {
+            id.append(rand.nextInt(10));
+        }
+
+        Libro nuevo = new Libro(nombre, autor, genero, id.toString());
+        biblioteca.libros.add(nuevo);
+        System.out.println("¡Libro agregado con éxito!");
+    }
+
+    public void descargarLibro(Biblioteca biblioteca, Scanner sc) {
+        System.out.print("Ingrese el código del libro: ");
+        String codigo = sc.nextLine();
+
+        for (Libro libro : biblioteca.libros) {
+            if (libro.codigo.equals(codigo)) {
+                try {
+                    String userHome = System.getProperty("user.home");
+                    Path carpetaDescargas = Paths.get(userHome, "Downloads");
+                    if (!Files.exists(carpetaDescargas)) {
+                        Files.createDirectories(carpetaDescargas);
+                    }
+                    Path archivo = carpetaDescargas.resolve(libro.nombre.replace(" ", "_") + "_" + libro.codigo + ".txt");
+
+                    try (BufferedWriter writer = Files.newBufferedWriter(archivo)) {
+                        writer.write("📚 LIBRO DESCARGADO 📚\n\n");
+                        writer.write("Nombre: " + libro.nombre + "\n");
+                        writer.write("Autor: " + libro.autor + "\n");
+                        writer.write("Género: " + libro.genero + "\n");
+                        writer.write("Código: " + libro.codigo + "\n");
+                        writer.write("\n¡Disfruta tu lectura! ❤️\n");
+                    }
+
+                    System.out.println("El libro '" + libro.nombre + "' ha sido descargado en " + archivo.toString());
+                } catch (IOException e) {
+                    System.out.println("Error al descargar el libro: " + e.getMessage());
+                }
+                return;
+            }
+        }
+        System.out.println("⚠️ Código no encontrado");
+    }
+}
+
+class Admin extends Usuario {
+    public Admin() {
+        super("Alejandro", "123321", "10/06/2010");
+    }
+
+    public void cerrarPagina() {
+        System.out.println("Cerrando página...");
+        System.exit(0);
+    }
+}
+
+class Libro {
+    String nombre;
+    String autor;
+    String genero;
+    String codigo;
+
+    public Libro(String nombre, String autor, String genero, String codigo) {
+        this.nombre = nombre;
+        this.autor = autor;
+        this.genero = genero;
+        this.codigo = codigo;
+    }
+}
+
+class Biblioteca {
+    List<Libro> libros = new ArrayList<>();
+    List<Usuario> usuarios = new ArrayList<>();
+    Admin admin = new Admin();
+    Scanner sc = new Scanner(System.in);
+
+    public Biblioteca() {
+        libros.add(new Libro("El principito", "Antoine de Saint", "Novela", "842909348"));
+        libros.add(new Libro("Metamorfosis", "Franz Kafka", "Novela", "349090878"));
+        libros.add(new Libro("El gato negro", "Edgar Allan Poe", "Cuento", "054983232"));
+    }
+
+    public void interfaz1() {
+        System.out.println("Biblioteca Virtual");
+        System.out.println("1) Registrarse");
+        System.out.println("2) Iniciar sesión");
+        System.out.print("Ingrese opción: ");
+        String op = sc.nextLine();
+        switch (op) {
+            case "1": registrarUsuario(); break;
+            case "2": iniciarSesion(); break;
+            default: System.out.println("Opción inválida"); interfaz1(); break;
+        }
+    }
+
+    public void interfazUsuario(Usuario u) {
+        System.out.println("\nBIBLIOTECA VIRTUAL");
+        System.out.println("1) Buscar libro");
+        System.out.println("2) Subir un libro");
+        System.out.println("3) Descargar libro");
+        System.out.println("4) Ver algunos libros");
+        System.out.println("5) Cerrar sesión");
+        System.out.print("Ingrese opción: ");
+        String op = sc.nextLine();
+
+        switch (op) {
+            case "1": buscarLibro(); interfazUsuario(u); break;
+            case "2": u.subirLibro(this, sc); interfazUsuario(u); break;
+            case "3": u.descargarLibro(this, sc); interfazUsuario(u); break;
+            case "4": verLibros(); interfazUsuario(u); break;
+            case "5": interfaz1(); break;
+            default: System.out.println("Opción inválida"); interfazUsuario(u); break;
+        }
+    }
+
+    public void interfazAdmin() {
+        System.out.println("\nADMIN");
+        System.out.println("1) Buscar libro");
+        System.out.println("2) Subir un libro");
+        System.out.println("3) Descargar libro");
+        System.out.println("4) Ver algunos libros");
+        System.out.println("5) Cerrar sesión");
+        System.out.println("6) Apagar sistema");
+        System.out.print("Ingrese opción: ");
+        String op = sc.nextLine();
+
+        switch (op) {
+            case "1": buscarLibro(); interfazAdmin(); break;
+            case "2": admin.subirLibro(this, sc); interfazAdmin(); break;
+            case "3": admin.descargarLibro(this, sc); interfazAdmin(); break;
+            case "4": verLibros(); interfazAdmin(); break;
+            case "5": interfaz1(); break;
+            case "6": admin.cerrarPagina(); break;
+            default: System.out.println("Opción inválida"); interfazAdmin(); break;
+        }
+    }
+
+    public void iniciarSesion() {
+        System.out.print("Ingrese su identificación: ");
+        String id = sc.nextLine();
+        if (id.equals(admin.identificacion)) {
+            interfazAdmin();
+        } else {
+            for (Usuario u : usuarios) {
+                if (u.identificacion.equals(id)) {
+                    interfazUsuario(u);
+                    return;
+                }
+            }
+            System.out.println("Usuario no registrado.");
+            interfaz1();
+        }
+    }
+
+    public void registrarUsuario() {
+        System.out.print("Nombre: ");
+        String nombre = sc.nextLine();
+        System.out.print("Identificación: ");
+        String id = sc.nextLine();
+        System.out.print("Fecha de nacimiento (DD/MM/AAAA): ");
+        String fn = sc.nextLine();
+
+        Usuario nuevo = new Usuario(nombre, id, fn);
+        usuarios.add(nuevo);
+        System.out.println("Usuario registrado con éxito.");
+        interfaz1();
+    }
+
+    public void buscarLibro() {
+        System.out.print("Ingrese referencia (nombre, autor, género, código): ");
+        String ref = sc.nextLine();
+        boolean encontrado = false;
+        for (Libro l : libros) {
+            if (l.nombre.equalsIgnoreCase(ref) || l.autor.equalsIgnoreCase(ref) ||
+                l.genero.equalsIgnoreCase(ref) || l.codigo.equals(ref)) {
+                System.out.println("----------------------------------");
+                System.out.println("Nombre: " + l.nombre);
+                System.out.println("Autor: " + l.autor);
+                System.out.println("Género: " + l.genero);
+                System.out.println("Código: " + l.codigo);
+                System.out.println("----------------------------------");
+                encontrado = true;
+            }
+        }
+        if (!encontrado) {
+            System.out.println("Libro no encontrado.");
+        }
+    }
+
+    public void verLibros() {
+        System.out.println("Libros disponibles:");
+        if (libros.size() <= 10) {
+            for (Libro l : libros) {
+                System.out.println(l.nombre + " -- " + l.genero + " -- " + l.codigo);
+            }
+        } else {
+            Collections.shuffle(libros);
+            for (int i = 0; i < libros.size() / 2; i++) {
+                Libro l = libros.get(i);
+                System.out.println(l.nombre + " -- " + l.genero + " -- " + l.codigo);
+            }
+        }
+    }
+}
+
+public class BibliotecaApp {
+    public static void main(String[] args) {
+        Biblioteca b = new Biblioteca();
+        b.interfaz1();
+    }
+}
