@@ -5,7 +5,7 @@ import os
 
 
 class Usuario:
-    def __init__(self, nombre, identificacion, fecha_nacimiento):
+    def __init__(self, nombre, identificacion):
         self.nombre = nombre
         self.identificacion = identificacion
     
@@ -217,17 +217,18 @@ class biblioteca:
         if biblioteca==None:
             biblioteca=biblioteca_virtual
         print("Algunas de los libros disponibles son: ")
-        print("Nombre -- Genero -- Codigo")
+        print("Nombre ---- Autor ---- Genero ---- Codigo")
         if len(self.libros)<10:
             for lbo in self.libros:
                 print("-".center(50,"-"))
-                print(f"{lbo.nombre} -- {lbo.genero} -- {lbo.codigo}")
+                print(f"{lbo.nombre} -- {lbo.autor} -- {lbo.genero} -- {lbo.codigo}")
                 print("-".center(50,"-"))
         else:
-            lb_ran=random.sample(self.libros,len(self.libros)//2)   
-            print("-".center(50,"-"))
-            print(f"{lb_ran.nombre} -- {lb_ran.genero} -- {lb_ran.codigo}")
-            print("-".center(50,"-"))
+            lb_ran_=random.sample(self.libros,len(self.libros)//2)
+            for lb_ran in lb_ran_:   
+                print("-".center(50,"-"))
+                print(f"{lb_ran.nombre} -- {lb_ran.autor} -- {lb_ran.genero} -- {lb_ran.codigo}")
+                print("-".center(50,"-"))
 
         if v==1:
             biblioteca.interfasAdmin()

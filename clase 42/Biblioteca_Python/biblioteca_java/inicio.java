@@ -16,9 +16,11 @@ public class inicio {
 
         var Alejo = new admin();
 
+       
+        Biblioteca_virtual.interfaz1(Alejo, Biblioteca_virtual);
 
-        Biblioteca_virtual.interfaz1(Biblioteca_virtual);
-        }
+
+        
     }
 
     
