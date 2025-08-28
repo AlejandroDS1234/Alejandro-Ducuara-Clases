@@ -60,9 +60,9 @@ public class usuarios {
             for (var libro: biblioteca.Libross) {
                 IDsss.add(libro.codigo);
                 if (IDsss.contains(cdg_)) {
-                    var idxx = IDsss.indexOf(cdg_)
+                    var idxx = IDsss.indexOf(cdg_);
 
-                    
+
                 }
             }
         }
