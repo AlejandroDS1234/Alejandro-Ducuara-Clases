@@ -83,10 +83,10 @@ public class biblioteca {
             case "3":
                 Alejo.descargar_libro(1,Alejo,usuarios, biblioteca);
                 break;
-            case "4":
+            case "5":
                 biblioteca.interfaz1(Alejo,biblioteca);
                 break;
-            case "5":
+            case "4":
                 biblioteca.ver_libros(1,Alejo,usuarios,biblioteca);
                 break;
             case "6":

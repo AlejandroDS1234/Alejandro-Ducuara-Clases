@@ -1,7 +1,9 @@
 package biblioteca_java;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import java.io.FileWriter; //Para crear el archivo
+import java.io.PrintWriter; //Para escribir en el archivo
+import java.io.IOException; //Para los errores al crear el archivo
 
 public class usuarios {
 
@@ -59,18 +61,40 @@ public class usuarios {
             var IDsss = new ArrayList<String>();
             for (var libro: biblioteca.Libross) {
                 IDsss.add(libro.codigo);
-                if (IDsss.contains(cdg_)) {
-                    var idxx = IDsss.indexOf(cdg_);
+            }
+            if (IDsss.contains(cdg_)) {
+                var idxx = IDsss.indexOf(cdg_);
 
+                try {
+                    FileWriter librO = new FileWriter(biblioteca.Libross.get(idxx).titulo);
+                    PrintWriter escribiendo = new PrintWriter(librO);
+                    escribiendo.println(String.format("-------------------- %s --------------------", biblioteca.Libross.get(idxx).titulo));
+                    escribiendo.println(String.format("Autor: %s", biblioteca.Libross.get(idxx).autor));
+                    escribiendo.println(String.format("Genero: %s", biblioteca.Libross.get(idxx).genero));
 
+                    escribiendo.close();
+                    System.out.println("¡Libro descargado!");
+                    if (d==1) {
+                        biblioteca.interfazAdmin(admin, usuarios, biblioteca);
+                    } else {
+                        biblioteca.interfaz2(admin, usuarios, biblioteca);
+                    }
+                } catch (IOException e) {
+                    System.out.println("Lo lamentamos, ha ocurrido un error");
+                }
+
+            } else {
+                System.out.println("El codigo de libro no existe");
+                if (d==1) {
+                    biblioteca.interfazAdmin(admin, usuarios, biblioteca);
+
+                } else {
+                    biblioteca.interfaz2(admin, usuarios, biblioteca);
                 }
             }
+            
         }
 
     }
 
-
-
-
-    
 }

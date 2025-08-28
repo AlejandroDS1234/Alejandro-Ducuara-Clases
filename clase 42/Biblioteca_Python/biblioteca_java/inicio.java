@@ -8,11 +8,11 @@ public class inicio {
         var libro2xdefecto = new libros("Metamorfosis", "Franz Kafka", "Novela", "349090878");
         var libro3xdefecto = new libros("El gato negro", "Edgar Allan Poe", "Cuento", "054983232");
         
-        var Biblioteca_virtual = new biblioteca();//
+        var Biblioteca_virtual = new biblioteca();
 
-        Biblioteca_virtual.Libross.add(libro1xdefecto);//
-        Biblioteca_virtual.Libross.add(libro2xdefecto);//
-        Biblioteca_virtual.Libross.add(libro3xdefecto);//
+        Biblioteca_virtual.Libross.add(libro1xdefecto);
+        Biblioteca_virtual.Libross.add(libro2xdefecto);
+        Biblioteca_virtual.Libross.add(libro3xdefecto);
 
         var Alejo = new admin();
 

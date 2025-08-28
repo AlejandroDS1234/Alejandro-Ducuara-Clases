@@ -44,7 +44,7 @@ class Usuario:
             if cdg in IDsss:
                 idxx=IDsss.index(cdg)
                 
-                direccion_descargas= os.path.join(os.path.expanduser("~"), "Downloads")
+                direccion_descargas= os.getcwd()
                 nombre_txt=f"{biblioteca.libros[idxx].nombre.replace(' ','_')}.txt"
                 direccion_completa=os.path.join(direccion_descargas, nombre_txt)
                 with open(direccion_completa, "w", encoding="utf-8") as f:

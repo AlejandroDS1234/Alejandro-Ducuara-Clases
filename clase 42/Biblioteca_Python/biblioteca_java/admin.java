@@ -7,6 +7,7 @@ public class admin extends usuarios {
     
 
     public void cerrar_pagina() {
+        System.out.println("Cerrando");
         System.exit(0);
     }
 }
