@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 /* 
 public class helloWorld{
@@ -472,7 +471,7 @@ public class Aprendiendo_java {//La clase publica debe llamarse igual que el arc
 
 
 
-
+/* 
 
         //Bucles
 
@@ -551,6 +550,72 @@ public class Aprendiendo_java {//La clase publica debe llamarse igual que el arc
         }
 
 
+
+
+
+*/
+
+
+
+
+
+
+
+        //funciones
+
+        // funciones sin parametro ni retorno
+
+
+
+        for (int q=0; q<5; q+=1) {
+            AlgoFuncion();
+        }
+
+        AlgoFuncion();
+        AlgoFuncionParametro("Pepito");
+        AlgoFuncionParametro("Pepito", "si");
+        System.out.println(DosMasDos());
+
+        System.out.println(3+DosMasDos());
+
     }
 
+    //como definir
+    //modificador: publica o privada o clase  //publica: que se puede acceder desde cualquier parte del codigo
+    //que nos quiere retornar la funcion: si o va a retornar nada se le pone void
+
+    //funcion sin parametro ni retorno
+    public static void AlgoFuncion() { //no se pueden llamar funciones dentro de una funcion static como la del inicio, para hacerlo la funcion tambien debe ser static
+        System.out.println("Algo");
+        
+    }//linea 574
+
+    //Funciones con parametro sobrecarga
+
+    public static void AlgoFuncionParametro(String persona) {
+
+        System.out.println(String.format("Hola %s", persona));
+    }//linea 575
+
+    //sobrecarga
+
+    public static void AlgoFuncionParametro(String persona, String gusto) { //se pueden poner 2 funciones con el mismo nombre pero con la cantidad de requerimientos diferente y asi se le puede poner de a 1 requerimiento
+
+        System.out.println(String.format("Hola %s que %s gusta la piña", persona, gusto));
+    }//linea 576
+
+
+
+
+    //funciones con retorno
+
+    public static Integer DosMasDos() {    //la sobrecarga de funciones no funciona si se cambia el retorno
+
+        var ala=2+2;
+
+        return ala;// los return van al final
+    } //577
+
+
+    
 }
