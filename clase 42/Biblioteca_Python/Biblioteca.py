@@ -1,4 +1,4 @@
-from datetime import datetime
+
 import random
 import os
 
@@ -8,7 +8,7 @@ class Usuario:
     def __init__(self, nombre, identificacion, fecha_nacimiento):
         self.nombre = nombre
         self.identificacion = identificacion
-        self.fecha_nacimiento = fecha_nacimiento
+    
 
     def subir_libro(self,s, Usuario, biblioteca=None ):
         if biblioteca==None:
@@ -72,7 +72,7 @@ class Usuario:
 
 class admin(Usuario):
     def __init__(self):
-        super().__init__(nombre="Alejandro",identificacion="123321",fecha_nacimiento=datetime(2010, 6, 10))
+        super().__init__(nombre="Alejandro",identificacion="123321")
 
 
     def cerrarPagina(self):
@@ -179,20 +179,12 @@ class biblioteca:
         nm=input("Ingrese su nombre: ")
         id=input("Ingrese su identificacion: ")
 
-
-        while True:
-            fn=input("Ingrese su fecha de nacimiento (DD/MM/AAA): ")
-            try:
-                datetime.strptime(fn, "%d/%m/%Y")
-                break
-            except:
-                print("Fecha invalida o mal ingresada, vuelva a intentar")
         
         IDss=[usuario.identificacion for usuario in self.usuarios]
         if id in IDss:
             print("Este usuario ya esta registrado")
             biblioteca.interfas1()
-        nuevo_usuario=Usuario(nm,id,fn)
+        nuevo_usuario=Usuario(nm,id)
         self.usuarios.append(nuevo_usuario)
         biblioteca.interfas1()
 
