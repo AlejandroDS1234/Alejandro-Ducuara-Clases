@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+
 Descargar:
 
 https://www.mediafire.com/file/qyk15yhso0tw3sk/OpenJDK24U-jdk_x64_windows_hotspot_24.0.2_12.zip/file
 
 =======
->>>>>>> be66f39 (Comandos graficos y demas)
+
 Descomprime el archivo en una carpeta donde tengas acceso, por ejemplo: a
 
 C:\Users\TuUsuario\Herramientas\jdk-17
@@ -21,5 +21,6 @@ Cuando lo tengas descomprimido:
 
     Si te muestra la versión de Java, ya está funcionando
 
-
+abrir
+C:\Users\HP\java\jdk-24.0.2+12\bin\
 a
