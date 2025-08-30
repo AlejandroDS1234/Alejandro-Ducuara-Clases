@@ -1,0 +1,27 @@
+dir -> ver los elementos de la carpeta
+
+cls -> limpiar la terminal
+
+cd  -> para acceder a una carpeta
+
+mkdir nombre -> crear una nueva carpeta
+
+echo  -> ejecutar cosas
+  |
+  v
+EJEMPLO:
+echo Hola mundo > ejemplo.txt     -> va a crear un archivo de texto con hola mundo adentro
+
+
+del  -> borrar archivos
+
+cd ..  -> ir a la carpeta anterior
+
+
+
+
+
+Instalar java
+
+
+

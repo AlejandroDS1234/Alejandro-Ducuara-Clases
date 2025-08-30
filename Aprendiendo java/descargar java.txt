@@ -1,0 +1,29 @@
+<<<<<<< HEAD
+Descargar:
+
+https://www.mediafire.com/file/qyk15yhso0tw3sk/OpenJDK24U-jdk_x64_windows_hotspot_24.0.2_12.zip/file
+
+=======
+>>>>>>> be66f39 (Comandos graficos y demas)
+Descomprime el archivo en una carpeta donde tengas acceso, por ejemplo: a
+
+C:\Users\TuUsuario\Herramientas\jdk-17
+
+Cuando lo tengas descomprimido:
+
+    Abre la terminal de Windows (cmd o PowerShell).
+    Ve a la carpeta bin del JDK, por ejemplo:
+        cd C:\Users\TuUsuario\Herramientas\jdk-17\bin
+    Ejecuta:
+        java -version
+    Y:
+        javac -version
+
+    Si te muestra la versión de Java, ya está funcionando
+<<<<<<< HEAD
+    1
+    2
+=======
+>>>>>>> be66f39 (Comandos graficos y demas)
+
+

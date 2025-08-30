@@ -3,7 +3,7 @@
 public class helloWorld{
     public static void main(String[] args) { // es una funcion que se llama args
         System.out.println(1+1);//imprimir 1+1
-        System.out.println("Hola\nmundo"); // imprimir hola mundo
+        System.out.println("Hola\nmundo"); // imprimir hola mundoaa
     }
 }
 
