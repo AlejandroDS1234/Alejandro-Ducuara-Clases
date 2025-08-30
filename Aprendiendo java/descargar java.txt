@@ -20,10 +20,6 @@ Cuando lo tengas descomprimido:
         javac -version
 
     Si te muestra la versión de Java, ya está funcionando
-<<<<<<< HEAD
-    1
-    2
-=======
->>>>>>> be66f39 (Comandos graficos y demas)
 
 
+a
