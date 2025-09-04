@@ -1,0 +1,53 @@
+===========================================
+INSTRUCCIONES PARA COMPILAR Y EJECUTAR JAVA
+===========================================
+
+PROYECTO CON PACKAGE: biblioteca_java
+ARCHIVO PRINCIPAL: inicio.java
+CLASE PRINCIPAL: public class inicio
+
+-------------------------------------------
+RUTAS IMPORTANTES:
+-------------------------------------------
+JDK: C:\Users\HP\java\jdk-24.0.2+12\bin
+Proyecto: 
+C:\Users\HP\Desktop\Provicional 2.0\Alejandro-Ducuara-Clases\clase 42\Biblioteca_Python\biblioteca_java
+
+-------------------------------------------
+PASOS PARA COMPILAR Y EJECUTAR
+-------------------------------------------
+
+1. ABRIR LA TERMINAL (cmd) Y MOVERSE A LA CARPETA RAÍZ DEL PROYECTO:
+
+cd /d "C:\Users\HP\Desktop\Provicional 2.0\Alejandro-Ducuara-Clases\clase 42\Biblioteca_Python"
+
+2. COMPILAR EL ARCHIVO inicio.java:
+
+"C:\Users\HP\java\jdk-24.0.2+12\bin\javac.exe" biblioteca_java\inicio.java
+
+(Esto generará el archivo inicio.class en la carpeta biblioteca_java)
+
+3. EJECUTAR EL PROGRAMA COMPILADO:
+
+"C:\Users\HP\java\jdk-24.0.2+12\bin\java.exe" biblioteca_java.inicio
+
+-------------------------------------------
+OPCIONAL: COMPILAR TODOS LOS ARCHIVOS .JAVA DEL PAQUETE:
+
+"C:\Users\HP\java\jdk-24.0.2+12\bin\javac.exe" biblioteca_java\*.java
+
+-------------------------------------------
+NOTAS IMPORTANTES:
+-------------------------------------------
+- Asegúrate de que el nombre del archivo inicio.java coincida exactamente 
+  con el nombre de la clase pública: public class inicio
+
+- No incluyas ".java" ni ".class" al ejecutar con `java.exe`. Usa el nombre
+  del paquete y la clase separados por puntos: biblioteca_java.inicio
+
+- Si hay errores, revisa mayúsculas, rutas, y nombres de clase.
+
+===========================================
+GUARDADO POR: ChatGPT
+FECHA: [Agrega la fecha si quieres]
+===========================================
