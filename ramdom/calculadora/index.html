@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="funcion.js"></script>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+    <div class="cabeza">
+        <h1 class="pp">Calculadora</h1>
+    </div>
+    
+    <br>
+    <div class="inp">
+
+        <input  type="number" id="num1" placeholder="ingresa un numero" required> 
+        <p class="op" id="operador"> </p>
+        <input  type="number" id="num2" placeholder="ingresa otro numero" required>
+    </div>
+    <!--<br>-->
+    <div class="pp">
+        <button class="boton" onclick="suma()">sumar</button>
+        <button class="boton" onclick="multiplicacion()">multiplicar</button>
+        <button class="boton" onclick="restar()">restar</button>
+        <button class="boton" onclick="raiz()">raiz</button>
+        <a href ="pag2.html">
+            <button class="boton" onclick="raiz()">logaritmo</button>
+        </a>
+        
+    </div>
+    <p id="res" class="pp"></p>
+    <p id="res2" class="pp"></p>
+
+</body>
+</html>
