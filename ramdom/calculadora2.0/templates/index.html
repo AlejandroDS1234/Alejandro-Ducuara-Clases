@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ url_for('static', filename='diseño.css') }}" rel="stylesheet">
+        <script src="{{ url_for('static', filename='funcion.js') }}"></script>
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+        <br><br>
+        <div class="calculadora">
+            <p id="operacion" class="opera"> </p>
+            
+            <div class="teclado">
+                <div class="fila">
+                    <button class="boton boton_borrar" onclick="borrar()">Borrar</button>
+                    <button class="boton" onclick="nuevo('+')">+</button>
+                    <button class="boton" onclick="nuevo('-')">-</button>
+                    <div class="res">
+                        <p class="a">Resultado:  </p>
+                        <p class="p" id="resul"></p>
+                    </div>
+                </div>
+                <div class="fila">
+                    <button class="boton" onclick="nuevo(1)">1</button>
+                    <button class="boton" onclick="nuevo(2)">2</button>
+                    <button class="boton" onclick="nuevo(3)">3</button>
+                    <button class="boton" onclick="nuevo('x')">x</button>
+                    
+                </div>
+                
+                <div class="fila">
+                    <button class="boton" onclick="nuevo(4)">4</button>
+                    <button class="boton" onclick="nuevo(5)">5</button>
+                    <button class="boton" onclick="nuevo(6)">6</button>
+                    <button class="boton" onclick="nuevo('÷')">÷</button>
+                </div>
+                
+                <div class="fila">
+                    <button class="boton" onclick="nuevo(7)">7</button>
+                    <button class="boton" onclick="nuevo(8)">8</button>
+                    <button class="boton" onclick="nuevo(9)">9</button>
+                    <button class="boton" onclick="eliminar()"><--</button>
+                </div>
+                <div class="fila">
+                    <button class="boton" onclick="nuevo(0)">0</button>
+                    <button class="boton" onclick="nuevo('.')">.</button>
+                    <button class="boton" onclick="resultado(1)">=</button>
+                    
+                </div>
+
+                
+            </div>
+            
+        </div>
+    </body>
+</html>

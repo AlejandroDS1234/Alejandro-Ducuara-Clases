@@ -1,0 +1,96 @@
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #8FAD88;
+
+}
+.calculadora {
+    box-sizing: border-box;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+    /* background-color: rgb(255, 0, 0); */
+}
+
+.teclado {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: left;
+    margin-left: 7%;
+    margin-top: 2.5%;
+
+    /* background-color: chocolate; */
+}
+
+.opera {
+    box-sizing: border-box;
+    display: flex;
+    /* background-color: rgb(65, 126, 218); */
+    width: 95%;
+    min-height: 10%;
+    margin: auto;
+    margin-bottom: 0.5%;
+    font-size: 135%;
+    justify-content: flex-end;
+    align-items: center;
+    border: 5px solid black;
+}
+.boton {
+    box-sizing: border-box;
+    width: 7%; /*ancho */
+    height: 95%;
+    margin: 0.25%;
+    border: 2px solid black;
+    background-color: #7F9C96;
+
+    /* padding: 0; */
+}
+
+h1 {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    background-color: #4D7C8A;
+    height: 15%;
+}
+
+.res {
+    box-sizing: border-box;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+    width: 50%;
+    height: 70%;
+    text-align: left;
+    text-indent: 10%;
+    box-sizing: border-box;
+    font-size: 150%;
+    border: 2px solid black;
+}
+.fila {
+    box-sizing: border-box;
+    /* background-color: chartreuse; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+.boton_borrar {
+    width: 14.5%;
+}
+.p {
+    box-sizing: border-box;
+    margin-left: 5%;
+}
