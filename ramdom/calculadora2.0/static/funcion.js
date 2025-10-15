@@ -2,8 +2,9 @@ let texto=""
 let operacion=""
 
 function nuevo(num) {
-    if ((texto[texto.length-1]=="+" || texto[texto.length-1]=="-" || texto[texto.length-1]=="x" || texto[texto.length-1]=="÷" || texto[texto.length-1]==".")) {
-        if (typeof num == 'number') {
+    let ult=texto.length-1
+    if (texto[ult]=="+" || texto[ult]=="-" || texto[ult]=="x" || texto[ult]=="÷" || texto[ult]==".") {
+        if (typeof num == 'number' || num=="(") {
             texto+=num
             document.getElementById("operacion").innerText=texto
             operacion+=num
@@ -23,6 +24,7 @@ function nuevo(num) {
                 operacion+=num
         }
     }
+
     resultado(0)
 
 }
@@ -60,24 +62,30 @@ function resultado(num) {
             eliminar()
         } 
         let resul=eval(operacion)
-        document.getElementById("resul").innerText=""
-        document.getElementById("resul").innerText+=resul
+        hola(resul)
+     
     } else {
         if ((texto[texto.length-1]=="+" || texto[texto.length-1]=="-" || texto[texto.length-1]=="x" || texto[texto.length-1]=="÷" || texto[texto.length-1]==".")) {
             let eliminado=operacion.slice(0, operacion.length-1)
-            console.log(operacion.slice(0, operacion.length-1))
             pp=eval(eliminado)
             document.getElementById("resul").innerText=""
             document.getElementById("resul").innerText=pp
             return
         } 
         let eliminado=eval(operacion)
-        document.getElementById("resul").innerText=""
-        document.getElementById("resul").innerText=eliminado
+        hola(eliminado)
+        
     }
 
 
 }
 
-let op= eval("1+1")
-console.log(op)
+function hola(numm) {
+    if (numm==3) {
+        document.getElementById("resul").innerText=""
+        document.getElementById("resul").innerText="Hola Mundo"
+    } else {
+        document.getElementById("resul").innerText=""
+        document.getElementById("resul").innerText=numm
+    }
+}

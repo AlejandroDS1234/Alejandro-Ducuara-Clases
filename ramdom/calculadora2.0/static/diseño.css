@@ -72,10 +72,11 @@ h1 {
     width: 50%;
     height: 70%;
     text-align: left;
-    text-indent: 10%;
+    text-indent: 1%;
     box-sizing: border-box;
     font-size: 150%;
     border: 2px solid black;
+    white-space: nowrap;
 }
 .fila {
     box-sizing: border-box;
@@ -90,7 +91,15 @@ h1 {
 .boton_borrar {
     width: 14.5%;
 }
-.p {
+.pe {
     box-sizing: border-box;
     margin-left: 5%;
+    /* background-color: brown; */
+    width: 80%;
+    height: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-size: 100%;
+
 }
