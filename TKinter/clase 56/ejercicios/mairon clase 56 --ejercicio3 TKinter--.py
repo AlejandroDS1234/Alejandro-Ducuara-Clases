@@ -21,7 +21,7 @@ def agregar():
 
     if tarea_.strip() != "":
         mensaje.configure(text="Tarea agregada con exito")
-        lista.insert(tk.END, f"{lista.size() + 1}. {tarea_}")
+        lista.insert(tk.END, f"{tarea_}")
         tarea.delete(0, tk.END)
     else:
         mensaje.configure(text="No ingreso ninguna tarea")
@@ -31,7 +31,14 @@ def eliminar():
         tarea_=tarea.get()
         if tarea_.strip() != "":
             indices=lista.get(0, tk.END)
-            print(indices)
+            if tarea_ in indices:
+                indice=indices.index(tarea_)
+                lista.delete(indice)
+                mensaje.configure(text="Tarea eliminada con exito")
+                tarea.delete(0, tk.END)
+            else:
+                mensaje.configure(text="La tarea no se encuentra en la lista")
+                tarea.delete(0, tk.END)
             
         else:
             mensaje.configure(text="Ingrese la tarea a eliminar")
