@@ -31,6 +31,9 @@ def escribir (num):
         if num.isdigit():
             operacion["text"]+=str(num)
             
+    global resul
+    resul=False
+            
 def borrar():
     operacion["text"]=operacion["text"][0:-1]    
 
