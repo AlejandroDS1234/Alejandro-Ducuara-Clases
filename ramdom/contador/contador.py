@@ -18,8 +18,8 @@ def click():
 		ventana2.attributes('-fullscreen', True)
 		ancho= ventana2.winfo_screenwidth()
 		alto=ventana2.winfo_screenheight()
-		cosa=Image.open("D:/Nueva carpeta/Alejandro-Ducuara-Clases/ramdom/contador/datos/download.jpg")
-		cosa2=Image.open("D:/Nueva carpeta/Alejandro-Ducuara-Clases/ramdom/contador/datos/ng.png")
+		cosa=Image.open("C:/Users/HP/Desktop/Provicional 2.0/Alejandro-Ducuara-Clases/ramdom/contador/datos/download.jpg")
+		cosa2=Image.open("C:/Users/HP/Desktop/Provicional 2.0/Alejandro-Ducuara-Clases/ramdom/contador/datos/ng.png")
 		cosa2=cosa2.resize((ancho,alto))
 		cosa=cosa.resize((ancho,alto))
 		mostrarcosa=ImageTk.PhotoImage(cosa)
@@ -42,7 +42,7 @@ def click():
 
 			ventana2.after(300, a)
 
-		winsound.PlaySound("D:/Nueva carpeta/Alejandro-Ducuara-Clases/ramdom/contador/datos/sonido.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+		winsound.PlaySound("C:/Users/HP/Desktop/Provicional 2.0/Alejandro-Ducuara-Clases/ramdom/contador/datos/sonido.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
 		time.sleep(0.5)
 		a()
 		ventana2.after(5000, lambda: estado.update({"activo":False}))

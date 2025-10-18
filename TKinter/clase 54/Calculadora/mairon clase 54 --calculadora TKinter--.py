@@ -31,3 +31,4 @@ def calcular(): #evalua lo escrito en la caja de texto
     except:
         entrada.delete(0, tk.END)
         entrada.insert(0, "Error")
+ventana.mainloop()
