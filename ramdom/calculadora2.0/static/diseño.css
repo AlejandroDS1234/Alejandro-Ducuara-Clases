@@ -7,6 +7,14 @@ html, body {
     background-color: #8FAD88;
 
 }
+
+section{
+    background-color: #8FAD88;
+    width: 100%;
+    animation: aparecer 2s;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
 .calculadora {
     box-sizing: border-box;
     width: 50%;
@@ -48,19 +56,26 @@ html, body {
     margin: 0.25%;
     border: 2px solid black;
     background-color: #7F9C96;
+    transition: background 0.25s linear;
 
     /* padding: 0; */
 }
 
-h1 {
+.boton:hover {
+    background-color: #1b4079;
+}
+
+header {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     margin: auto;
     text-align: center;
     background-color: #4D7C8A;
     height: 15%;
+    padding-bottom: 10%;
+    flex-direction: column;
 }
 
 .res {
@@ -103,3 +118,66 @@ h1 {
     font-size: 100%;
 
 }
+
+.navegar {
+    /* background-color: blueviolet; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 5%;
+}
+
+.navegar a {
+    color: white;
+    font-size: 150%;
+    text-decoration:none;
+}
+
+
+/* animaciones */
+
+@keyframes aparecer {
+
+    from{
+        opacity: 0;;
+    }
+
+    to {
+        opacity: 100%;;
+    }
+    
+}
+
+
+/*  */
+
+.inp {
+    height: 30px;
+    display: flex; 
+    text-align: center;
+    justify-content: center;
+}
+.op {
+    font-size: 20px;
+    text-align: center;
+    margin: 1.25px 2.5px; 
+}
+
+.cabeza {
+    background-color: orange;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+}
+
+.pp {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+

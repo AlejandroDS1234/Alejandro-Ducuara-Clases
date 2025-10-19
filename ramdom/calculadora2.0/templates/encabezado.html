@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='diseño.css') }}" rel="stylesheet">
+    <title>Mi pagina</title>
+</head>
+<body>
+    <header>
+        <h1>Proyectos</h1>
+        <nav class="navegar">
+            <a href="{{url_for('index')}}">Menu</a>
+            <a  href="{{url_for('calculadora')}}">Calculadora</a>
+            <a href="{{url_for('calculadora1')}}">Calculadora1</a>
+        </nav>
+    </header>
+    <br><br>
+        {% block content %}
+        {% endblock %}
+    
+</body>
+</html>
