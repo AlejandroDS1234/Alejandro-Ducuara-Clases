@@ -1,0 +1,53 @@
+.cuadrado {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    margin: auto;
+    border: black 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotar 5s linear 1;
+    animation-fill-mode: forwards;
+    flex-shrink: 0;
+}
+
+.cua {
+    width: 145px;
+    height: 145px;
+    border-color: red;
+    animation: rotar 5.5s linear 1;
+    animation-fill-mode: forwards;
+}
+
+.cua2 {
+    width: 95px;
+    height: 95px;
+    border-color: blue;
+    animation: rotar 6s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    /* 50% {
+        transform: rotate(180deg);
+        width: 50%;
+        height: 50%;
+    } */
+    /* 95% {
+        transform: rotate(342deg) ;
+        opacity: 0%;
+    } */
+
+    100% {
+        transform: rotate(360deg);
+        width: 0px;
+        height: 0px;
+        display: none;
+        opacity: 0%;
+    }
+}

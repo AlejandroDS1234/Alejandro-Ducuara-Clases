@@ -2,12 +2,17 @@
 <html>
 
 <body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='diseño_animacion.css') }}">
     {%extends "encabezado.html" %}
 
     {% block content%}
-    <br><br>
-    <section class="inicio">
-        <h2 class="pp" >hola</h2>
+    
+    <section class="inicio" style="bacground-color: #f0f0f0;">
+        <div class="cuadrado">
+            <div class="cuadrado cua">
+                <div class="cuadrado cua2"></div>
+            </div>
+        </div>
     </section>
     {% endblock %}
 </body>
