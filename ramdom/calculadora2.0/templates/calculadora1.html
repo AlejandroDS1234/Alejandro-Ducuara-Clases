@@ -1,9 +1,8 @@
 
-<!DOCTYPE html>
-<html lang="es">
-{% extends 'encabezado.html'%}
+{% extends 'head.html'%}
 <body>
     {% block content %}
+    {%include "encabezado.html" %}
     <section>
         <script src="{{ url_for('static', filename='funcion_cal1.js') }}"></script>
         <div class="cabeza">
@@ -31,6 +30,5 @@
         <p id="res" class="pp"></p>
         <p id="res2" class="pp"></p>
     </section>
-    {% endblock %}
 </body>
-</html>
+{% endblock %}

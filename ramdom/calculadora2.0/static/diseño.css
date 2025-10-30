@@ -78,6 +78,7 @@ header {
     padding-bottom: 10%;
     flex-direction: column;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .res {

@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html>
-
+{%extends "head.html" %}
+{% block content %}
 <body>
     <link rel="stylesheet" href="{{ url_for('static', filename='diseño_animacion.css') }}">
-    {%extends "encabezado.html" %}
-
-    {% block content%}
-    
-    <section class="inicio" style="bacground-color: #f0f0f0;">
+    {% include "encabezado.html" %}
+    <div class="iniciando">
         <div class="cuadrado">
             <div class="cuadrado cua">
                 <div class="cuadrado cua2"></div>
             </div>
         </div>
+    </div>
+    <section class="inicio" style="bacground-color: #f0f0f0;">
+
     </section>
-    {% endblock %}
 </body>
-</html>
+{% endblock %}
